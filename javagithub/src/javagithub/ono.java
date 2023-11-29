@@ -1,5 +1,10 @@
 package javagithub;
 
-public class ono {
+import java.util.List;
 
+public class ono {
+	private String intitule;
+    private Enseignant responsable;
+    private List<Filiere> filieres;
+    
 }
