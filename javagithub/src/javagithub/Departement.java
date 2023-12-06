@@ -1,5 +1,5 @@
 package javagithub;
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class Departement {
@@ -7,11 +7,11 @@ public class Departement {
 	    private Enseignant responsable;
 	    private List<Filiere> filieres;
 	    
-		public Departement(String intitule, Enseignant responsable, List<Filiere> filieres) {
+		public Departement(String intitule, Enseignant responsable) {
 			super();
 			this.intitule = intitule;
 			this.responsable = responsable;
-			this.filieres = filieres;
+			this.filieres = new ArrayList<>();
 		}
 		public String getIntitule() {
 			return intitule;

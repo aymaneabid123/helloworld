@@ -4,7 +4,6 @@ public class Module {
 	 private String intitule;
 	    private Filiere filiere;
 	    private Enseignant professeur;
-	
 	 
 		public Module(String intitule, Filiere filiere, Enseignant professeur) {
 			super();

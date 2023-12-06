@@ -1,11 +1,23 @@
 package javagithub;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Enseignant {
 	    private String nom;
 	    private String prenom;
 	    private String email;
 	    private String grade;
 	    private Departement departement;
+	    private List<Module> modulesEnseignes;
+	    public Enseignant(String nom, String prenom, String email, String grade, Departement departement) {
+	        this.nom = nom;
+	        this.prenom = prenom;
+	        this.email = email;
+	        this.grade = grade;
+	        this.departement = departement;
+	        this.modulesEnseignes = new ArrayList<>();
+	    }
 		public String getNom() {
 			return nom;
 		}

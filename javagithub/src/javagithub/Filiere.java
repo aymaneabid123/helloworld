@@ -1,5 +1,6 @@
 package javagithub;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Filiere {
@@ -7,13 +8,14 @@ public class Filiere {
 	    private Enseignant responsable;
 	    private Departement departement;
 	    private List<Module> modules;
+	    private static final int NOMBRE_MIN_MODULES = 12;
 	    
-		public Filiere(String intitule, Enseignant responsable, Departement departement, List<Module> modules) {
+		public Filiere(String intitule, Enseignant responsable, Departement departement) {
 			super();
 			this.intitule = intitule;
 			this.responsable = responsable;
 			this.departement = departement;
-			this.modules = modules;
+			this.modules = new ArrayList<>();
 		}
 		public String getIntitule() {
 			return intitule;
@@ -39,6 +41,13 @@ public class Filiere {
 		public void setModules(List<Module> modules) {
 			this.modules = modules;
 		}
+		public void ajouterModule(Module module) {
+	        if (modules.size() < NOMBRE_MIN_MODULES) {
+	            modules.add(module);
+	        } else {
+	            System.out.println("Nombre maximal de modules atteint pour cette filière.");
+	        }
+	    }
 
 	    
 	}
